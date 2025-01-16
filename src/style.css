@@ -1,8 +1,72 @@
 #dropdown-button {
-  width: 30px;
-  height: auto;
-  background: url('/assets/picklist-type-svgrepo-com.svg');
+  width: 50px;
+  height: 50px;
+  background: url('assets/picklist-type-svgrepo-com.svg');
   background-size: contain;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#dropdown-button:hover {
+  transform: scale(1.1); /* Adds a nice hover effect */
+}
+
+#container {
+  position: relative; /* Enables child elements to be positioned absolutely */
+}
+
+select {
+  position: absolute;
+  top: 0; /* Align with the button */
+  left: 60px; /* Place the select element 10px to the right of the button */
+  height: 50px;
+  width: 200px; /* Increase the width for better readability */
+  display: none; /* Initially hidden */
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Rounded corners for a smoother look */
+  font-size: 1rem;
+  color: #333;
+  padding: 0 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+}
+
+/* Add a hover effect for the select */
+select:hover {
+  border-color: #888;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+option {
+  padding: 10px; /* Add some padding to options */
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for options */
+option:hover {
+  background-color: #e0e0e0;
+}
+
+/* Active/Selected option styling */
+option:checked {
+  background-color: #00ffff;
+  color: white;
+}
+
+/* Option for custom dropdown arrow styling */
+select::-ms-expand {
+  display: none; /* Removes default dropdown arrow in IE */
+}
+
+select:focus {
+  outline: none; /* Remove focus outline */
+  border-color: rgb(36, 35, 34); /* Highlight border when focused */
 }

@@ -1,1 +1,4 @@
-console.log('Hello, Webpack!');
+import './style.css';
+import { renderDropdown } from './modules/renderDropdown';
+
+renderDropdown();
