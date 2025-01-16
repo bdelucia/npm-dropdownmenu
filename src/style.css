@@ -1,0 +1,8 @@
+#dropdown-button {
+  width: 30px;
+  height: auto;
+  background: url('/assets/picklist-type-svgrepo-com.svg');
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
